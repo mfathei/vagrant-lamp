@@ -31,6 +31,12 @@ apt-get install -y php7.2-mbstring
 apt-get install -y php7.2-mcrypt
 apt-get install -y php7.2-zip
 
+# Composer
+cd ~
+apt-get install -y curl php-cli unzip
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+
 # Set MySQL Pass
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
