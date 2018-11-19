@@ -1,0 +1,3 @@
+
+vagrant package --base LMDE-debian --output vagrant-lmde-3.box
+vagrant box add debian/lmde vagrant-lmde-3.box
