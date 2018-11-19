@@ -1,7 +1,7 @@
 # Update Packages
-apt-get update
+apt-get update -y
 # Upgrade Packages
-apt-get upgrade
+apt-get upgrade -y
 
 # Basic Linux Stuff
 apt-get install -y git
