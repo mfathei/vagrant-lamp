@@ -9,7 +9,7 @@ sudo nano /etc/sudoers add this or edit:
 Defaults:vagrant !requiretty
 #Defaults !visiblepw
 Defaults env_keep = "SSH_AUTH_SOCK"
-#Defaults env_reset (in debian only)
+#Defaults env_reset
 vagrant ALL=NOPASSWD: ALL (should be the latest line in the file)
 
 in lmde only u need to edit this file so vagrant detect it as debian and can configure network:
