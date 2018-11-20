@@ -1,0 +1,1 @@
+disable selinux from /etc/selinux/config but I disabled it in my own box image
