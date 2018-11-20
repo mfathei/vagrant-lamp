@@ -45,7 +45,5 @@ sudo systemctl enable httpd.service
 yum install -y curl unzip
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo yum install -y nodejs
-sudo yum install -y npm
-
