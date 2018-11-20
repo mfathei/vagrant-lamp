@@ -1,1 +1,6 @@
 disable selinux from /etc/selinux/config but I disabled it in my own box image
+
+
+if u need to run ng serve from the box add --poll=1000 to it to watch the synced folder
+ng serve --poll=1000 --host=0.0.0.0
+

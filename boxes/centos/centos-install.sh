@@ -47,3 +47,11 @@ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo yum install -y nodejs
+
+# Yarn
+curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
+sudo yum install -y yarn
+
+# add --poll=1000 to ng serve command so changes from windows will be detected in vagrant box by ng serve
+# ng serve --poll=1000 --host=0.0.0.0
