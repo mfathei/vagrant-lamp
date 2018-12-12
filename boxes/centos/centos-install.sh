@@ -1,7 +1,7 @@
 # Update Packages
-yum update -y
+#yum update -y
 
-# disable selinux
+# disable selinux temporarily
 sudo setenforce 0
 
 # SSH
@@ -12,9 +12,10 @@ sudo systemctl restart sshd;
 sudo yum install -y nano
 
 # Basic Linux Stuff
-yum install -y git
+sudo yum install -y git
 
 # SSH key
+su - vagrant
 ssh-keygen -t rsa -b 4096 -C "oracle.dev10g@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
@@ -39,7 +40,7 @@ sudo systemctl restart mariadb.service
 sudo yum install -y epel-release yum-utils
 sudo yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 sudo yum-config-manager --enable remi-php72
-sudo yum install -y httpd php php-common php-mbstring php-zip php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd php-pdo php-xml php-xmlrpc
+sudo yum install -y httpd php php-common php-mbstring php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd php-pdo php-xml php-xmlrpc
 
 # Apache
 sudo systemctl start httpd.service
@@ -56,6 +57,11 @@ sudo yum install -y nodejs
 curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
 sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
 sudo yum install -y yarn
+
+# Redis 
+sudo yum install -y redis
+sudo systemctl start redis
+sudo systemctl enable redis
 
 # add --poll=1000 to ng serve command so changes from windows will be detected in vagrant box by ng serve
 # ng serve --poll=1000 --host=0.0.0.0
