@@ -3,6 +3,7 @@
 
 # disable selinux temporarily
 sudo setenforce 0
+sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config;
 
 # SSH
 sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
@@ -15,7 +16,7 @@ sudo yum install -y nano
 sudo yum install -y git
 
 # SSH key
-su - vagrant
+# su - vagrant
 ssh-keygen -t rsa -b 4096 -C "oracle.dev10g@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
