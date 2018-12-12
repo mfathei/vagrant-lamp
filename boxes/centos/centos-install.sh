@@ -41,7 +41,7 @@ sudo systemctl restart mariadb.service
 sudo yum install -y epel-release yum-utils
 sudo yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 sudo yum-config-manager --enable remi-php72
-sudo yum install -y httpd php php-common php-mbstring php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd php-pdo php-xml php-xmlrpc
+sudo yum install -y httpd php php-common php-mbstring php-intl php-tidy php-zip php-posix php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd php-pdo php-xml php-xmlrpc
 
 # Apache
 sudo systemctl start httpd.service
