@@ -5,3 +5,8 @@ vagrant box add debian/lmde vagrant-lmde-3.box
 
 
 note: in CentOS u need to disable selinux in ur vagrant box so u can run php from outside the machine
+
+
+vagrant box add laravel/homestead homestead-7-1-0.box
+
+

@@ -1,0 +1,11 @@
+{
+    "name": "laravel/homestead",
+    "description": "Laravel homestead version 7 box",
+    "versions": [{
+        "version": "7.0.0",
+        "providers": [{
+            "name": "virtualbox",
+            "url": "file:///media/g/PROGRAMMING/Vagrant/boxes/homestead/homestead-7-1.box"
+        }]
+    }]
+}
